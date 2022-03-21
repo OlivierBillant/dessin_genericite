@@ -1,8 +1,8 @@
 package bo;
 
-public interface InterfaceSuperficie {
+public interface InterfaceSuperficie<T> {
 
 	
-	public Superficie<?> getSuperficie();
+	public T getSuperficie();
 	
 }

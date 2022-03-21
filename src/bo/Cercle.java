@@ -1,6 +1,6 @@
 package bo;
 
-public final class Cercle extends Forme implements InterfaceSuperficie{
+public final class Cercle extends Forme implements InterfaceSuperficie<Float>{
 // final on bloque l'heritage
 	private int rayon;
 
@@ -25,10 +25,9 @@ public final class Cercle extends Forme implements InterfaceSuperficie{
 		return "Cercle [rayon=" + rayon + ", x=" + x + ", y=" + y + "]";
 	}
 	@Override
-	public Superficie<Float> getSuperficie() {
-		Superficie<Float> superficie = new Superficie();
-		superficie.setSuperficie(rayon * rayon* 3.1415f);
-		return superficie;
+	public Float getSuperficie() {
+		float s = rayon * rayon* 3.1415f;
+		return s;
 	}
 
 	

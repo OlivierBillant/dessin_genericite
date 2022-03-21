@@ -1,6 +1,6 @@
 package bo;
 
-public class Rectangle extends Forme implements InterfaceSuperficie{
+public class Rectangle extends Forme implements InterfaceSuperficie<Integer>{
 	protected int longueur;
 	protected int largeur;
 	
@@ -33,10 +33,9 @@ public class Rectangle extends Forme implements InterfaceSuperficie{
 		return "Rectangle [longueur=" + longueur + ", largeur=" + largeur + ", x=" + x + ", y=" + y + "]";
 	}
 	@Override
-	public Superficie<Integer> getSuperficie() {
-		Superficie<Integer> superficie = new Superficie();
-		superficie.setSuperficie(longueur*largeur);
-		return superficie;
+	public Integer getSuperficie() {
+		int s = longueur*largeur;
+		return s;
 	}
 	
 	
